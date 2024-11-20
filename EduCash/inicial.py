@@ -3,13 +3,15 @@ import flet as ft
 def InicialPage(page: ft.Page):
     def continuar_jogo(_):
         print("Continuar jogo clicado!")
-        page.snack_bar = ft.SnackBar(content=ft.Text("Continuando jogo..."))
-        page.snack_bar.open()
-
+        page.go("/continuar")
+        
     def novo_jogo(_):
         print("Novo jogo clicado!")
-        page.snack_bar = ft.SnackBar(content=ft.Text("Novo jogo iniciado!"))
-        page.snack_bar.open()
+        page.go("/novo")
+
+    def ir_para_perfil(_):
+        print("Abrindo perfil...")
+        page.go("/perfil")
 
     cabecalho = ft.Container(
         content=ft.Row(
@@ -20,7 +22,12 @@ def InicialPage(page: ft.Page):
                     weight=ft.FontWeight.BOLD,
                     color="#0C0473",
                 ),
-                ft.Icon(ft.icons.ACCOUNT_CIRCLE, color="#0C0473", size=30),
+                ft.IconButton(  
+                    icon=ft.icons.ACCOUNT_CIRCLE,
+                    icon_color="#0C0473",
+                    icon_size=30,
+                    on_click=ir_para_perfil,  
+                ),
             ],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -67,14 +74,13 @@ def InicialPage(page: ft.Page):
                 [
                     ft.Container(
                         expand=True,
-                        image_src="https://i.ibb.co/LCP6mzw", 
-                        image_fit=ft.ImageFit.COVER,
+                        bgcolor="#0C0473",  
                     ),
                     conteudo_central,
                 ]
             ),
         ],
-        spacing=0,
+        spacing=200,
         expand=True,
     )
 
