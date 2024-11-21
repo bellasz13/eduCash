@@ -9,6 +9,10 @@ def InicialPage(page: ft.Page):
         print("Novo jogo clicado!")
         page.go("/novo")
 
+    def ir_para_perfil(_):
+        print("Abrindo perfil...")
+        page.go("/perfil")
+
     cabecalho = ft.Container(
         content=ft.Row(
             [
@@ -18,7 +22,12 @@ def InicialPage(page: ft.Page):
                     weight=ft.FontWeight.BOLD,
                     color="#0C0473",
                 ),
-                ft.Icon(ft.icons.ACCOUNT_CIRCLE, color="#0C0473", size=30),
+                ft.IconButton(  
+                    icon=ft.icons.ACCOUNT_CIRCLE,
+                    icon_color="#0C0473",
+                    icon_size=30,
+                    on_click=ir_para_perfil,  
+                ),
             ],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -64,7 +73,8 @@ def InicialPage(page: ft.Page):
             ft.Stack(
                 [
                     ft.Container(
-                        
+                        expand=True,
+                        bgcolor="#0C0473",  
                     ),
                     conteudo_central,
                 ]

@@ -4,14 +4,15 @@ def ContinuarPage(page: ft.Page):
     def voltar_para_inicial(_):
         print("Voltando para a tela inicial...")
         page.go("/inicial")
+        
+    def ir_para_perfil(_):
+        print("Abrindo perfil...")
+        page.go("/perfil")
 
     def selecionar_capitulo(e):
-        print(f"Capítulo selecionado: {e.control.data}")
-        page.snack_bar = ft.SnackBar(
-            ft.Text(f"Capítulo {e.control.data} selecionado!"),
-            bgcolor="#F5E4B4"
-        )
-        page.snack_bar.open()
+        capitulo_selecionado = e.control.data  
+        print(f"Capítulo selecionado: {capitulo_selecionado}")
+        page.go(f"/capitulo{capitulo_selecionado}")
 
     cabecalho = ft.Container(
         content=ft.Row(
@@ -32,6 +33,7 @@ def ContinuarPage(page: ft.Page):
                     icon=ft.icons.ACCOUNT_CIRCLE,
                     icon_size=30,
                     icon_color="#0C0473",
+                    on_click=ir_para_perfil, 
                 ),
             ],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,

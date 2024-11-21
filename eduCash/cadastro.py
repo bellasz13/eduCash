@@ -4,8 +4,9 @@ def CadastroPage(page: ft.Page):
     def criar_usuario(_):
         print("Usuário cadastrado com sucesso!")
         page.go("/inicial")  
-        
+
     def voltar_ao_main(_):
+        print("Voltando ao menu principal...")
         page.go("/")  
 
     porco_imagem = ft.Image(
@@ -15,54 +16,65 @@ def CadastroPage(page: ft.Page):
         fit=ft.ImageFit.CONTAIN,
     )
 
-    titulo = ft.Text(
-        "Cadastro",
-        size=20,
-        weight=ft.FontWeight.BOLD,
+    texto = ft.Text(
+        "Que ótimo ter você conosco!\n\n" 
+        "Pronto para iniciar sua jornada?",
+        size=18,
         color="white",
+        text_align=ft.TextAlign.CENTER
     )
 
     campo_user = ft.TextField(
-        hint_text="Usuário",
+        label="Usuário",
         width=250,
         bgcolor="white",
         border_color="#886D9C",
+        color="#0C0473",
     )
 
     campo_email = ft.TextField(
-        hint_text="E-mail",
+        label="E-mail",
         width=250,
         bgcolor="white",
         border_color="#886D9C",
+        color="#0C0473",
     )
 
     campo_senha = ft.TextField(
-        hint_text="Senha",
+        label="Senha",
         width=250,
         bgcolor="white",
         border_color="#886D9C",
+        color="#0C0473",
         password=True,
     )
 
     botao_criar = ft.ElevatedButton(
-        text="Criar",
+        text="Criar Conta",
         color="white",
         bgcolor="#886D9C",
         width=200,
         on_click=criar_usuario,
     )
 
-    botao_voltar = ft.TextButton(
-        text="Voltar",
+    botao_voltar = ft.IconButton(
+        icon=ft.icons.ARROW_BACK,
+        icon_size=30,
+        icon_color="white",
         on_click=voltar_ao_main,
-        style=ft.ButtonStyle(color="white"),
     )
 
     layout_cadastro = ft.Column(
         [
-            botao_voltar,
+            ft.Row(
+                [
+                    botao_voltar,
+                ],
+                alignment=ft.MainAxisAlignment.START,
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            ),
             porco_imagem,
-            titulo,
+            texto,
             campo_user,
             campo_email,
             campo_senha,
@@ -70,8 +82,15 @@ def CadastroPage(page: ft.Page):
         ],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        spacing=10,
+        spacing=15,
+    )
+
+    layout_completo = ft.Container(
+        content=layout_cadastro,
+        bgcolor="#0C0473",  
+        expand=True,
+        padding=ft.padding.symmetric(horizontal=20, vertical=40),
     )
 
     page.controls.clear()
-    page.add(layout_cadastro)
+    page.add(layout_completo)
