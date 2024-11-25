@@ -1,9 +1,35 @@
 import flet as ft
+from database import verificar_usuario
 
 def LoginPage(page: ft.Page):
     def autenticar_usuario(_):
-        print("Usuário autenticado com sucesso!")
-        page.go("/inicial")  
+        usuario = campo_user.value
+        senha = campo_senha.value
+
+        if usuario and senha:
+            try:
+                if verificar_usuario(usuario, senha):
+                    ft.SnackBar(
+                        text="Login realizado com sucesso!", 
+                        open=True
+                    ).open = True
+                    page.go("/inicial")  
+                else:
+                    ft.SnackBar(
+                        text="Usuário ou senha incorretos!", 
+                        open=True
+                    ).open = True
+            except Exception as e:
+                ft.SnackBar(
+                    text=f"Erro ao autenticar: {e}", 
+                    open=True
+                ).open = True
+        else:
+            ft.SnackBar(
+                content="Preencha todos os campos!",
+                open=True
+            ).open = True
+
 
     def voltar_ao_main(_):
         print("Voltando ao menu principal...")
@@ -19,7 +45,7 @@ def LoginPage(page: ft.Page):
     texto = ft.Text(
         "Seja bem-vindo(a) de volta à sua jornada financeira!\n\n" 
         "Pronto para mais aprendizados e conquistas?",
-        size=18,
+        size=15,
         color="white",
         text_align=ft.TextAlign.CENTER
     )

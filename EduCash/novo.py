@@ -52,6 +52,7 @@ def NovoPage(page: ft.Page):
         bgcolor="#F5E4B4",
         border_radius=20,
         border=ft.border.all(2, color="#0C0473"),
+        alignment=ft.alignment.center,
     )
 
     personagem = ft.Image(
@@ -70,18 +71,17 @@ def NovoPage(page: ft.Page):
         on_click=ir_continuar,
     )
 
-    layout_inferior = ft.Column(
+    layout_principal = ft.Column(
         [
-            ft.Row(
-                [
-                    ft.Container(
-                        content=personagem,
-                        alignment=ft.alignment.center,
-                    ),
-                    balao_fala,
-                ],
-                alignment=ft.MainAxisAlignment.CENTER,
-                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            ft.Container(
+                content=balao_fala,
+                alignment=ft.alignment.center,
+                margin=ft.margin.only(bottom=20),
+            ),
+            ft.Container(
+                content=personagem,
+                alignment=ft.alignment.center,
+                margin=ft.margin.only(top=20),
             ),
             ft.Container(
                 content=botao_avancar,
@@ -89,23 +89,22 @@ def NovoPage(page: ft.Page):
                 margin=ft.margin.only(top=20),
             ),
         ],
-        alignment=ft.MainAxisAlignment.CENTER,
+        alignment=ft.MainAxisAlignment.START,  
         expand=True,
     )
 
-    layout_completo = ft.Column(
-        [
-            cabecalho,
-            ft.Container(
-                content=layout_inferior,
-                bgcolor="#0C0473",
-                expand=True,
-                padding=ft.padding.all(20),
-            ),
-        ],
-        spacing=0,
+    layout_rolavel = ft.Container(
+        content=ft.Column(
+            [
+                cabecalho,  
+                layout_principal,  
+            ],
+            scroll=ft.ScrollMode.AUTO,  
+        ),
         expand=True,
+        bgcolor="#0C0473",
+        padding=ft.padding.all(20),
     )
 
     page.controls.clear()
-    page.add(layout_completo)
+    page.add(layout_rolavel)

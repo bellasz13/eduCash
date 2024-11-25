@@ -10,19 +10,16 @@ def ContinuarPage(page: ft.Page):
         page.go("/perfil")
 
     def selecionar_capitulo(e):
-        print(f"Capítulo selecionado: {e.control.data}")
-        page.snack_bar = ft.SnackBar(
-            ft.Text(f"Capítulo {e.control.data} selecionado!"),
-            bgcolor="#F5E4B4"
-        )
-        page.snack_bar.open()
+        capitulo_selecionado = e.control.data  
+        print(f"Capítulo selecionado: {capitulo_selecionado}")
+        page.go(f"/capitulo{capitulo_selecionado}")
 
     cabecalho = ft.Container(
         content=ft.Row(
             [
                 ft.IconButton(
                     icon=ft.icons.ARROW_BACK,
-                    icon_size=30,
+                    icon_size=24,
                     icon_color="#0C0473",
                     on_click=voltar_para_inicial,
                 ),

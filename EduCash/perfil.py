@@ -171,9 +171,15 @@ def PerfilPage(page: ft.Page):
     )
 
     container_principal = ft.Container(
-        content=layout,
+        content=ft.Column(
+            [
+                layout,
+            ],
+            scroll=ft.ScrollMode.AUTO,  
+        ),
         bgcolor="#0C0473",
         expand=True,
+        padding=ft.padding.all(20),
     )
 
     page.controls.clear()

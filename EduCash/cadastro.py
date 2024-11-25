@@ -1,9 +1,31 @@
 import flet as ft
+from database import criar_usuario
 
 def CadastroPage(page: ft.Page):
     def criar_usuario(_):
-        print("Usuário cadastrado com sucesso!")
-        page.go("/inicial")  
+        nome = campo_user.value
+        email = campo_email.value
+        senha = campo_senha.value
+
+        if nome and email and senha:
+            try:
+                criar_usuario(nome, email, senha) 
+                ft.SnackBar(
+                    text="Usuário cadastrado com sucesso!", 
+                    open=True
+                ).open = True
+                page.go("/inicial")  
+            except Exception as e:
+                ft.SnackBar(
+                    content="Erro ao cadastrar usuário: {e}",
+                    open=True
+                ).open = True
+        else:
+            ft.SnackBar(
+                content="Preencha todos os campos!",
+                open=True
+            ).open = True
+  
 
     def voltar_ao_main(_):
         print("Voltando ao menu principal...")
@@ -19,7 +41,7 @@ def CadastroPage(page: ft.Page):
     texto = ft.Text(
         "Que ótimo ter você conosco!\n\n" 
         "Pronto para iniciar sua jornada?",
-        size=18,
+        size=15,
         color="white",
         text_align=ft.TextAlign.CENTER
     )
@@ -54,7 +76,7 @@ def CadastroPage(page: ft.Page):
         color="white",
         bgcolor="#886D9C",
         width=200,
-        on_click=criar_usuario,
+        on_click=criar_usuario,  
     )
 
     botao_voltar = ft.IconButton(

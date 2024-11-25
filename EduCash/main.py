@@ -69,6 +69,16 @@ from cadastro import CadastroPage
 from inicial import InicialPage
 from continuar import ContinuarPage
 from novo import NovoPage
+from capitulo1 import Capitulo1Page
+from capitulo2 import Capitulo2Page
+from capitulo3 import Capitulo3Page
+from capitulo4 import Capitulo4Page
+from capitulo5 import Capitulo5Page
+from capitulo6 import Capitulo6Page
+from capitulo7 import Capitulo7Page
+from capitulo8 import Capitulo8Page
+from capitulo9 import Capitulo9Page
+from capitulo10 import Capitulo10Page
 from perfil import PerfilPage
 from editar import EditarPage
 
@@ -79,7 +89,7 @@ def MainPage(page: ft.Page):
         
     def navigate_to_cadastro(_):
         page.route = "/cadastro"  
-        page.update()
+        page.update()   
 
     porco_imagem = ft.Image(
         src="https://i.ibb.co/FV4k1tr/icone-educash.png",  
@@ -150,6 +160,26 @@ def main(page: ft.Page):
             ContinuarPage(page)
         elif page.route == "/novo":
             NovoPage(page)
+        elif page.route == "/capitulo1":
+            Capitulo1Page(page)
+        elif page.route == "/capitulo2":
+            Capitulo2Page(page)
+        elif page.route == "/capitulo3":
+            Capitulo3Page(page)
+        elif page.route == "/capitulo4":
+            Capitulo4Page(page)
+        elif page.route == "/capitulo5":
+            Capitulo5Page(page)
+        elif page.route == "/capitulo6":
+            Capitulo6Page(page)
+        elif page.route == "/capitulo7":
+            Capitulo7Page(page)
+        elif page.route == "/capitulo8":
+            Capitulo8Page(page)
+        elif page.route == "/capitulo9":
+            Capitulo9Page(page)
+        elif page.route == "/capitulo10":
+            Capitulo10Page(page)
         elif page.route == "/perfil":
             PerfilPage(page)
         elif page.route == "/editar":
