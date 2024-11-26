@@ -1,35 +1,30 @@
 import flet as ft
-from database import criar_usuario
+from database import inserir_usuario  
 
 def CadastroPage(page: ft.Page):
-    def criar_usuario(_):
+    def criar_usuario(e):
         nome = campo_user.value
         email = campo_email.value
         senha = campo_senha.value
 
-        if nome and email and senha:
-            try:
-                criar_usuario(nome, email, senha) 
-                ft.SnackBar(
-                    text="Usuário cadastrado com sucesso!", 
-                    open=True
-                ).open = True
-                page.go("/inicial")  
-            except Exception as e:
-                ft.SnackBar(
-                    content="Erro ao cadastrar usuário: {e}",
-                    open=True
-                ).open = True
-        else:
-            ft.SnackBar(
-                content="Preencha todos os campos!",
-                open=True
-            ).open = True
-  
+        if not nome or not email or not senha:
+            page.snack_bar = ft.SnackBar(ft.Text("Preencha todos os campos!"), bgcolor="red")
+            page.snack_bar.open = True
+            page.update()
+            return
+        try:
+            inserir_usuario(nome, email, senha)  
+            page.snack_bar = ft.SnackBar(ft.Text("Usuário cadastrado com sucesso!"), bgcolor="green")
+            page.snack_bar.open = True
+            page.update()
+            page.go("/login")  
+        except Exception as e:
+            page.snack_bar = ft.SnackBar(ft.Text(f"Erro ao cadastrar usuário: {e}"), bgcolor="red")
+            page.snack_bar.open = True
+            page.update()
 
     def voltar_ao_main(_):
-        print("Voltando ao menu principal...")
-        page.go("/")  
+        page.go("/")  #
 
     porco_imagem = ft.Image(
         src="https://i.ibb.co/FV4k1tr/icone-educash.png",  

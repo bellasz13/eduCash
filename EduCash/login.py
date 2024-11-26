@@ -9,30 +9,36 @@ def LoginPage(page: ft.Page):
         if usuario and senha:
             try:
                 if verificar_usuario(usuario, senha):
-                    ft.SnackBar(
-                        text="Login realizado com sucesso!", 
-                        open=True
-                    ).open = True
-                    page.go("/inicial")  
+                    page.snack_bar = ft.SnackBar(
+                        content=ft.Text("Login realizado com sucesso!"),
+                        bgcolor="green",
+                    )
+                    page.snack_bar.open = True
+                    page.update()
+                    page.go("/inicial")
                 else:
-                    ft.SnackBar(
-                        text="Usuário ou senha incorretos!", 
-                        open=True
-                    ).open = True
-            except Exception as e:
-                ft.SnackBar(
-                    text=f"Erro ao autenticar: {e}", 
-                    open=True
-                ).open = True
+                    page.snack_bar = ft.SnackBar(
+                        content=ft.Text("Usuário ou senha incorretos!"),
+                        bgcolor="red",
+                    )
+                    page.snack_bar.open = True
+                    page.update()
+            except Exception as ex:
+                page.snack_bar = ft.SnackBar(
+                    content=ft.Text(f"Erro ao autenticar: {ex}"),
+                    bgcolor="red",
+                )
+                page.snack_bar.open = True
+                page.update()
         else:
-            ft.SnackBar(
-                content="Preencha todos os campos!",
-                open=True
-            ).open = True
-
+            page.snack_bar = ft.SnackBar(
+                content=ft.Text("Preencha todos os campos!"),
+                bgcolor="orange",
+            )
+            page.snack_bar.open = True
+            page.update()
 
     def voltar_ao_main(_):
-        print("Voltando ao menu principal...")
         page.go("/") 
 
     porco_imagem = ft.Image(

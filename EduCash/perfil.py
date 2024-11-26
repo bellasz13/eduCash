@@ -1,10 +1,36 @@
 import flet as ft
+import mysql.connector
 
-def PerfilPage(page: ft.Page):
-    
+def verificar_usuario(id):
+    try:
+        conexao = mysql.connector.connect(
+            host="localhost",  
+            user="root",  
+            password="bellasz13", 
+            database="educash"  
+        )  
+        cursor = conexao.cursor()
+
+        cursor.execute("SELECT nome, email FROM cadastro WHERE id = %s", (id,))
+        resultado = cursor.fetchone()
+
+        if resultado:
+            return {"nome": resultado[0], "email": resultado[1]}
+        else:
+            return None
+    except mysql.connector.Error as err:
+        print(f"Erro ao acessar o banco de dados: {err}")
+        return None
+    finally:
+        conexao.close()  
+
+def PerfilPage(page: ft.Page, id):
+    cadastro = verificar_usuario(id)
+    nome = cadastro["nome"] if cadastro and "nome" in cadastro else "Nome não informado"
+    email = cadastro["email"] if cadastro and "email" in cadastro else "Email não informado"
+
     def voltar_para_anterior(_):
-        print("Voltando para a página anterior...")
-        page.go("/inicial")  
+        page.go("/inicial")
         
     def editar_perfil(_):
         print("Editar perfil clicado!")
@@ -50,24 +76,26 @@ def PerfilPage(page: ft.Page):
         size=100,
         color="white",
     )
-    nome_usuario = ft.Text(
-        "Nome",
+    
+    nome = ft.Text(
+        cadastro.get("nome", "Nome não informado"),
         size=18,
         color="white",
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
     )
-    email_usuario = ft.Text(
-        "email@email.com",
+    email = ft.Text(
+        cadastro.get("email", "Email não informado"),
         size=14,
         color="white",
         text_align=ft.TextAlign.CENTER,
     )
+    
     perfil_info = ft.Column(
         [
             icone_perfil,
-            nome_usuario,
-            email_usuario,
+            nome,
+            email,
         ],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

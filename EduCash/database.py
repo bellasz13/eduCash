@@ -16,7 +16,7 @@ def conectar():
         print(f"Erro ao conectar ao banco de dados: {e}")
         return None
     
-def criar_usuario(nome, email, senha):
+def inserir_usuario(nome, email, senha):
     conn = conectar()
     if conn:
         cursor = conn.cursor()

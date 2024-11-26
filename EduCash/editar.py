@@ -42,11 +42,6 @@ def EditarPage(page: ft.Page):
                     size=100,
                     color="#F5E4B4",
                 ),
-                ft.Icon(
-                    ft.icons.EDIT,
-                    size=20,
-                    color="#F5E4B4",
-                ),
             ],
             alignment=ft.MainAxisAlignment.CENTER,
         ),

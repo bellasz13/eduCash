@@ -148,10 +148,21 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.bgcolor = "#0C0473"
+    
+    usuario_logado = None
 
     def route_change(route):
+        
+        nonlocal usuario_logado
+        
         if page.route == "/login":
+            def on_login_success(usuario):
+                nonlocal usuario_logado
+                usuario_logado = usuario
+                page.go("/perfil")
+            
             LoginPage(page)
+            
         elif page.route == "/cadastro":
             CadastroPage(page)
         elif page.route == "/inicial":
@@ -180,8 +191,10 @@ def main(page: ft.Page):
             Capitulo9Page(page)
         elif page.route == "/capitulo10":
             Capitulo10Page(page)
+            
         elif page.route == "/perfil":
-            PerfilPage(page)
+            PerfilPage(page, id=1)
+                           
         elif page.route == "/editar":
             EditarPage(page)
         else:
