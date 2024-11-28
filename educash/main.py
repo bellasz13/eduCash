@@ -194,7 +194,7 @@ def main(page: ft.Page):
         elif page.route == "/perfil":
             PerfilPage(page, id=1)
         elif page.route == "/editar":
-            EditarPage(page)
+            EditarPage(page, id=1)
         else:
             MainPage(page)
 

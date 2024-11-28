@@ -1,43 +1,52 @@
 import flet as ft
 import mysql.connector
 
-def EditarPage(page: ft.Page): 
+def verificar_usuario(id):
+    try:
+        conexao = mysql.connector.connect(
+            host="localhost",  
+            user="root",  
+            password="isabella2005", 
+            database="educash"  
+        )  
+        
+        cursor1 = conexao.cursor()
+        cursor1.execute("SELECT nome, email FROM cadastro WHERE id = %s", (id,))
+        cadastro = cursor1.fetchone()
+        cursor1.close()
 
+        cursor2 = conexao.cursor()
+        cursor2.execute("SELECT telefone, data_nascimento FROM extra WHERE id = %s", (id,))
+        extra = cursor2.fetchone()
+        cursor2.close()
+
+        resultado = {}
+        if cadastro:
+            resultado["nome"] = cadastro[0]
+            resultado["email"] = cadastro[1]
+        if extra:
+            resultado["telefone"] = extra[0]
+            resultado["data_nascimento"] = extra[1]
+
+        return resultado if resultado else None
+    except mysql.connector.Error as err:
+        print(f"Erro ao acessar o banco de dados: {err}")
+        return None
+    finally:
+        if 'conexao' in locals() and conexao.is_connected():
+            conexao.close()
+
+def EditarPage(page: ft.Page, id):
+    usuario = verificar_usuario(id)
+    
+    nome = usuario["nome"] if usuario and "nome" in usuario else "Nome não informado"
+    email = usuario["email"] if usuario and "email" in usuario else "Email não informado"
+    telefone = usuario["telefone"] if usuario and "telefone" in usuario else "Telefone não informado"
+    data_nascimento = usuario["data_nascimento"] if usuario and "data_nascimento" in usuario else "Data de nascimento não informada"
+    
     def voltar_para_anterior(_):
-        print("Voltando para a página anterior...")
-        page.go("/perfil")
-
-    def carregar_dados_usuario():
-        try:
-            conexao = mysql.connector.connect(
-                host="localhost",  
-                user="root",  
-                password="isabella2005", 
-                database="educash"  
-            )  
-            cursor = conexao.cursor()
-
-            cursor.execute("SELECT nome, email FROM cadastro WHERE id = %s", (id,))
-            cadastro = cursor.fetchone()
-
-            cursor.execute("SELECT data_nascimento, telefone FROM extra WHERE id_usuario = %s", (id,))
-            extra = cursor.fetchone()
-
-            if cadastro:
-                campo_nome.value = cadastro[0]
-                campo_email.value = cadastro[1]
-
-            if extra:
-                campo_nascimento.value = extra[0] if extra[0] else ""
-                campo_telefone.value = extra[1] if extra[1] else ""
-
-            page.update() 
-        except mysql.connector.Error as err:
-            print(f"Erro ao carregar dados do banco de dados: {err}")
-        finally:
-            if 'conexao' in locals() and conexao.is_connected():
-                conexao.close()
-
+        page.go("/inicial")
+    
     def salvar_alteracoes(_):
         try:
             conexao = mysql.connector.connect(
@@ -50,20 +59,22 @@ def EditarPage(page: ft.Page):
 
             cursor.execute(
                 "UPDATE cadastro SET nome = %s, email = %s WHERE id = %s",
-                (campo_nome.value, campo_email.value, id)
+                (nome.value, email.value, id)
             )
 
             cursor.execute(
                 """
-                INSERT INTO extra (id_usuario, data_nascimento, telefone)
+                INSERT INTO extra (id, data_nascimento, telefone)
                 VALUES (%s, %s, %s)
                 ON DUPLICATE KEY UPDATE
-                data_nascimento = VALUES(data_nascimento), telefone = VALUES(telefone)
+                data_nascimento = %s, telefone = %s
                 """,
                 (
                     id,
-                    campo_nascimento.value,
-                    campo_telefone.value
+                    data_nascimento.value,
+                    telefone.value,
+                    data_nascimento.value,
+                    telefone.value
                 )
             )
 
@@ -85,7 +96,7 @@ def EditarPage(page: ft.Page):
             )
             cursor = conexao.cursor()
 
-            cursor.execute("DELETE FROM extra WHERE id_usuario = %s", (id,))
+            cursor.execute("DELETE FROM extra WHERE id = %s", (id,))
             cursor.execute("DELETE FROM cadastro WHERE id = %s", (id,))
 
             conexao.commit()
@@ -135,17 +146,18 @@ def EditarPage(page: ft.Page):
         padding=ft.padding.all(10),
     )
 
-    campo_nome = ft.TextField(
+    nome = ft.TextField(
         label="Nome de usuário",
-        value="",
+        value=nome,
         bgcolor="#0C0473",
         color="white",
         border_color="#F5E4B4",
         label_style=ft.TextStyle(color="#F5E4B4"),
         width=300,
     )
-    campo_nascimento = ft.TextField(
+    data_nascimento = ft.TextField(
         label="Data de nascimento",
+        value=data_nascimento,
         hint_text="dd/mm/aaaa",
         bgcolor="#0C0473",
         color="white",
@@ -153,8 +165,9 @@ def EditarPage(page: ft.Page):
         label_style=ft.TextStyle(color="#F5E4B4"),
         width=300,
     )
-    campo_telefone = ft.TextField(
+    telefone = ft.TextField(
         label="Telefone",
+        value=telefone,
         hint_text="(00) 0 0000 - 0000",
         bgcolor="#0C0473",
         color="white",
@@ -162,9 +175,9 @@ def EditarPage(page: ft.Page):
         label_style=ft.TextStyle(color="#F5E4B4"),
         width=300,
     )
-    campo_email = ft.TextField(
+    email = ft.TextField(
         label="Email",
-        value="",
+        value=email,
         bgcolor="#0C0473",
         color="white",
         border_color="#F5E4B4",
@@ -192,10 +205,10 @@ def EditarPage(page: ft.Page):
         [
             cabecalho,
             icone_perfil,
-            campo_nome,
-            campo_nascimento,
-            campo_telefone,
-            campo_email,
+            nome,
+            data_nascimento,
+            telefone,
+            email,
             ft.Container(height=20),  
             botao_salvar,
             ft.Container(height=10),  
@@ -221,4 +234,3 @@ def EditarPage(page: ft.Page):
 
     page.controls.clear()
     page.add(container_principal)
-    carregar_dados_usuario()
