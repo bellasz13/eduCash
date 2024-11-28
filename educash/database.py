@@ -32,21 +32,25 @@ def inserir_usuario(nome, email, senha):
             cursor.close()
             conn.close()
     
-def verificar_usuario(nome, senha):
-    conn = conectar()
-    if conn:
-        cursor = conn.cursor()
-        try:
-            sql = "SELECT id FROM cadastro WHERE nome = %s AND senha = %s"
-            cursor.execute(sql, (nome, senha))
-            resultado = cursor.fetchone()
-            return resultado is not None  
-        except Error as e:
-            raise Exception(f"Erro ao verificar usuário: {e}")
-        finally:
-            cursor.close()
-            conn.close()
+def verificar_usuario(usuario, senha):
+    try:
+        conn = conectar()
+        cursor = conn.cursor(dictionary=True)  
+        cursor.execute("SELECT id, email, nome, senha FROM cadastro WHERE nome = %s", (usuario,))
+        resultado = cursor.fetchone() 
 
+        if resultado and resultado['senha'] == senha:
+            return resultado  
+        else:
+            return None  
+
+    except mysql.connector.Error as err:
+        print(f"Erro de banco de dados: {err}")
+        return None
+    finally:
+        if conn:
+            conn.close()
+            
 def adicionar_dados_extra(usuario_id, telefone, data_nascimento):
     conn = conectar()
     if conn:

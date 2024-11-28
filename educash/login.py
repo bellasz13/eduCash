@@ -1,22 +1,24 @@
 import flet as ft
 from database import verificar_usuario
 
-def LoginPage(page: ft.Page):
-    def autenticar_usuario(_):
+def LoginPage(page: ft.Page, on_login_success):
+    def autenticar_usuario(_): 
         usuario = campo_user.value
         senha = campo_senha.value
 
         if usuario and senha:
             try:
-                if verificar_usuario(usuario, senha):
+                usuario_logado = verificar_usuario(usuario, senha)
+                if usuario_logado:
                     snack_bar = ft.SnackBar(
                         content=ft.Text("Login realizado com sucesso!"),
                         bgcolor="green",
                     )
-                    page.overlay.append(snack_bar)  
+                    page.overlay.append(snack_bar)
                     snack_bar.open = True
                     page.update()
-                    page.go("/inicial")
+
+                    on_login_success(usuario_logado)
                 else:
                     snack_bar = ft.SnackBar(
                         content=ft.Text("Usuário ou senha incorretos!"),

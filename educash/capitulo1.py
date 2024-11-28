@@ -5,8 +5,9 @@ def Capitulo1Page(page: ft.Page):
         print("Voltando para a página anterior...")
         page.go("/continuar")
 
-    def abrir_subcapitulo(subcapitulo):
-        print(f"Abrindo o subcapítulo: {subcapitulo}...")
+    def abrir_subcapitulo(subcapitulo_index):
+        print(f"Abrindo o subcapítulo: {subcapitulo_index + 1}...")
+        page.go(f"/capitulo1.1?subcapitulo={subcapitulo_index}")
 
     cabecalho = ft.Container(
         content=ft.Row(

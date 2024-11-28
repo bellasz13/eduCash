@@ -1,5 +1,5 @@
 import flet as ft
-import mysql.connector
+import mysql.connector  
 
 def verificar_usuario(id):
     try:
@@ -9,25 +9,29 @@ def verificar_usuario(id):
             password="isabella2005", 
             database="educash"  
         )  
+        
         cursor = conexao.cursor()
-
         cursor.execute("SELECT nome, email FROM cadastro WHERE id = %s", (id,))
-        resultado = cursor.fetchone()
-
-        if resultado:
-            return {"nome": resultado[0], "email": resultado[1]}
-        else:
-            return None
+        cadastro = cursor.fetchone()
+        
+        resultado = {}
+        if cadastro:
+            resultado["nome"] = cadastro[0]
+            resultado["email"] = cadastro[1]
+        
+        return resultado if resultado else None
     except mysql.connector.Error as err:
         print(f"Erro ao acessar o banco de dados: {err}")
         return None
     finally:
-        conexao.close()  
+        if 'conexao' in locals() and conexao.is_connected():
+            conexao.close()
 
 def PerfilPage(page: ft.Page, id):
-    cadastro = verificar_usuario(id)
-    nome = cadastro["nome"] if cadastro and "nome" in cadastro else "Nome não informado"
-    email = cadastro["email"] if cadastro and "email" in cadastro else "Email não informado"
+    usuario = verificar_usuario(id)
+
+    nome_texto = usuario["nome"] if usuario and "nome" in usuario else "Nome não informado"
+    email_texto = usuario["email"] if usuario and "email" in usuario else "Email não informado"
 
     def voltar_para_anterior(_):
         page.go("/inicial")
@@ -78,14 +82,14 @@ def PerfilPage(page: ft.Page, id):
     )
     
     nome = ft.Text(
-        cadastro.get("nome", "Nome não informado"),
+        nome_texto,
         size=18,
         color="white",
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
     )
     email = ft.Text(
-        cadastro.get("email", "Email não informado"),
+        email_texto,
         size=14,
         color="white",
         text_align=ft.TextAlign.CENTER,
