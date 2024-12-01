@@ -70,11 +70,6 @@ from inicial import InicialPage
 from continuar import ContinuarPage
 from novo import NovoPage
 from capitulo1 import Capitulo1Page
-from capitulo1_1 import Capitulo1_1Page
-from capitulo1_2 import Capitulo1_2Page
-from capitulo1_3 import Capitulo1_3Page
-from capitulo1_4 import Capitulo1_4Page
-from capitulo1_5 import Capitulo1_5Page
 from capitulo2 import Capitulo2Page
 from capitulo3 import Capitulo3Page
 from capitulo4 import Capitulo4Page
@@ -182,8 +177,6 @@ def main(page: ft.Page):
             NovoPage(page)
         elif page.route == "/capitulo1":
             Capitulo1Page(page)
-        elif page.route == "/capitulo1_1":
-            Capitulo1_1Page(page)
         elif page.route == "/capitulo2":
             Capitulo2Page(page)
         elif page.route == "/capitulo3":

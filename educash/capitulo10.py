@@ -33,7 +33,7 @@ def Capitulo10Page(page: ft.Page):
     )
 
     titulo_capitulo = ft.Text(
-        "Capítulo 1: Fundamentos e Mentalidade",
+        "Capítulo 10: Tópicos Avançados",
         size=18,
         weight=ft.FontWeight.BOLD,
         color="white",
@@ -50,99 +50,67 @@ def Capitulo10Page(page: ft.Page):
         "Desafio",
     ]
 
-    subcapitulo_index = 0
-
-    subcapitulo_display = ft.Container(
-        width=200,
-        height=200,
-        bgcolor="#F5E4B4",
-        border_radius=10,
-        padding=ft.padding.all(10),
-        alignment=ft.alignment.center,
-        on_click=lambda _: abrir_subcapitulo(subcapitulos[subcapitulo_index]),
+    def criar_bloco_conteudo(index, conteudo):
+        return ft.Container(
+            content=ft.Column(
+                [
+                    ft.Text(
+                        f" {index + 1}",
+                        size=24,
+                        weight=ft.FontWeight.BOLD,
+                        color="#0C0473",  # Cor do título
+                    ),
+                    ft.Text(
+                        conteudo,
+                        size=16,
+                        weight=ft.FontWeight.NORMAL,
+                        color="#0C0473",  # Cor do texto
+                        text_align=ft.TextAlign.CENTER,
+                    ),
+                ],
+                alignment=ft.MainAxisAlignment.CENTER,
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            ),
+            width=200,
+            height=200,
+            bgcolor="#F5E4B4",  
+            border_radius=10,
+            padding=ft.padding.all(10),
+            alignment=ft.alignment.center,
+            on_click=lambda _: abrir_subcapitulo,
     )
 
-    def atualizar_subcapitulo():
-        subcapitulo_display.content = ft.Column(
-            [
-                ft.Text(
-                    str(subcapitulo_index + 1),
-                    size=32,
-                    weight=ft.FontWeight.BOLD,
-                    color="#0C0473",
-                    text_align=ft.TextAlign.CENTER
-                ),
-                ft.Text(
-                    subcapitulos[subcapitulo_index],
-                    size=16,
-                    weight=ft.FontWeight.W_900,
-                    color="#0C0473",
-                    text_align=ft.TextAlign.CENTER,
-                ),
-            ],
-            alignment=ft.MainAxisAlignment.CENTER,
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        )
-        page.update()
-
-    def proximo_subcapitulo(_):
-        nonlocal subcapitulo_index
-        if subcapitulo_index < len(subcapitulos) - 1:
-            subcapitulo_index += 1
-            atualizar_subcapitulo()
-
-    def subcapitulo_anterior(_):
-        nonlocal subcapitulo_index
-        if subcapitulo_index > 0:
-            subcapitulo_index -= 1
-            atualizar_subcapitulo()
-
-    navegacao = ft.Row(
+    blocos_conteudo = ft.Column(
         [
-            ft.IconButton(
-                icon=ft.icons.ARROW_BACK,
-                icon_color="white",
-                icon_size=28,
-                on_click=subcapitulo_anterior,
-            ),
-            subcapitulo_display,
-            ft.IconButton(
-                icon=ft.icons.ARROW_FORWARD,
-                icon_color="white",
-                icon_size=28,
-                on_click=proximo_subcapitulo,
-            ),
-        ],
+            criar_bloco_conteudo(i, subcapitulos[i]) for i in range(len(subcapitulos))
+        ],  
         alignment=ft.MainAxisAlignment.CENTER,
+        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
     )
 
-    layout_central = ft.Column(
-        [
-            titulo_capitulo,
-            ft.Container(height=40),  
-            navegacao,
-        ],
-        alignment=ft.MainAxisAlignment.CENTER,  
-        horizontal_alignment=ft.CrossAxisAlignment.CENTER,  
-        expand=True,  
-    )
-
-    layout_principal = ft.Column(
+    layout = ft.Column(
         [
             cabecalho,  
-            layout_central,  
+            titulo_capitulo,
+            ft.Container(height=20),  
+            blocos_conteudo,  
         ],
-        alignment=ft.MainAxisAlignment.START,  
+        alignment=ft.MainAxisAlignment.CENTER,
+        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         expand=True,
     )
 
     container_principal = ft.Container(
-        content=layout_principal,
+        content=ft.Column(
+            [
+                layout,
+            ],
+            scroll=ft.ScrollMode.AUTO,  
+        ),
         bgcolor="#0C0473",
         expand=True,
+        padding=ft.padding.all(20),
     )
-
-    atualizar_subcapitulo()
 
     page.controls.clear()
     page.add(container_principal)
