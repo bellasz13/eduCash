@@ -62,93 +62,93 @@ def Capitulo7Page(page: ft.Page):
     def criar_quiz():
         perguntas = [
             {
-                "pergunta": "",
+                "pergunta": "Como o planejamento tributário pode auxiliar uma empresa a lidar com as mudanças constantes na legislação tributária?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "O planejamento tributário não pode auxiliar nesse caso, pois as mudanças na legislação são imprevisíveis.", "correta": False},
+                    {"texto": "O planejamento tributário é inútil em um ambiente de constante mudança legislativa.", "correta": False},
+                    {"texto": "O planejamento tributário pode ajudar a identificar as mudanças e seus impactos na empresa, permitindo ajustes nas estratégias tributárias.", "correta": True},
+                    {"texto": "O planejamento tributário pode ser utilizado para criar mecanismos de evasão fiscal e evitar o pagamento de novos impostos.", "correta": False},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual a principal diferença entre a COFINS e a CSLL?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "A COFINS incide sobre a receita bruta, enquanto a CSLL incide sobre o lucro líquido.", "correta": True},
+                    {"texto": "A COFINS é um imposto estadual, enquanto a CSLL é federal.", "correta": False},
+                    {"texto": "A COFINS é paga apenas por pessoas físicas, enquanto a CSLL é paga apenas por pessoas jurídicas.", "correta": False},
+                    {"texto": "Não há diferença entre os dois impostos.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual dos seguintes itens NÃO pode ser deduzido do Imposto de Renda?",
                 "alternativas": [
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Despesas com educação infantil.", "correta": False},
+                    {"texto": "Despesas com tratamento médico.", "correta": False},
+                    {"texto": "Contribuições para planos de previdência privada PGBL.", "correta": False},
+                    {"texto": "Despesas com cursos de idiomas.", "correta": True},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a principal diferença entre o ITBI e o IPTU?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "O ITBI é um imposto federal, enquanto o IPTU é municipal.", "correta": False},
+                    {"texto": "O ITBI incide sobre a transmissão de bens imóveis, enquanto o IPTU incide sobre a posse de bens imóveis.", "correta": True},
+                    {"texto": "O ITBI é pago uma única vez, enquanto o IPTU é pago anualmente.", "correta": False},
+                    {"texto": "Todas as alternativas estão corretas.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a principal diferença entre a sucessão legítima e a sucessão testamentária?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "A sucessão legítima é sempre mais vantajosa para os herdeiros.", "correta": False},
+                    {"texto": "A sucessão testamentária é mais comum do que a legítima.", "correta": False},
+                    {"texto": "Não há diferença entre as duas, pois ambas resultam na transferência de bens após a morte.", "correta": False},
+                    {"texto": "A sucessão legítima ocorre por determinação legal, enquanto a testamentária é definida pelo desejo do falecido em testamento.", "correta": True},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a importância do planejamento sucessório para empresas familiares?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "O planejamento sucessório é apenas para pessoas físicas com grande patrimônio.", "correta": False},
+                    {"texto": "O planejamento sucessório garante que a empresa seja vendida para terceiros após a morte do fundador.", "correta": False},
+                    {"texto": "O planejamento sucessório é obrigatório para todas as empresas familiares.", "correta": False},
+                    {"texto": "O planejamento sucessório visa garantir a continuidade da empresa e proteger o patrimônio da família.", "correta": True},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual é o valor máximo permitido para dedução com despesas de educação por ano?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "R$ 2.275,08", "correta": False},
+                    {"texto": "12% da renda tributável", "correta": False},
+                    {"texto": "R$ 3.561,50", "correta": True},
+                    {"texto": "Não há limite", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual o principal objetivo dos incentivos fiscais oferecidos pelo governo às pequenas e médias empresas (PMEs)?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Aumentar a arrecadação de impostos para o governo.", "correta": False},
+                    {"texto": "Estimular o crescimento econômico e a geração de empregos.", "correta": True},
+                    {"texto": "Beneficiar apenas as grandes empresas que investem em tecnologia.", "correta": False},
+                    {"texto": "Reduzir a burocracia para as empresas de todos os portes.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é um exemplo de incentivo fiscal para PMEs?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Redução da alíquota do Imposto de Renda.", "correta": False},
+                    {"texto": "Aumento da carga tributária sobre produtos importados.", "correta": True},
+                    {"texto": "Crédito fiscal para investimento em pesquisa e desenvolvimento.", "correta": False},
+                    {"texto": "Isenção de impostos para empresas em zonas de incentivo.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a importância do planejamento tributário internacional para empresas que atuam no mercado global?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "É obrigatório para todas as empresas que realizam operações internacionais.", "correta": False},
+                    {"texto": "É irrelevante, pois as empresas brasileiras estão sujeitas apenas à legislação brasileira.", "correta": False},
+                    {"texto": "Serve apenas para empresas de grande porte.", "correta": False},
+                    {"texto": "É importante para evitar a dupla tributação e otimizar a carga tributária em operações internacionais.", "correta": True},
                 ],
             },
         ]
@@ -205,44 +205,42 @@ def Capitulo7Page(page: ft.Page):
 
     def subcapitulo7_1():
         criar_subcapitulo(
-            "Imposto de Renda Pessoa Física (IRPF)",
+            "Imposto de Renda\nPessoa Física\n(IRPF)",
             """
-            O contribuinte deverá manter os comprovantes de todos os rendimentos obtidos ao longo do ano passado. Isso inclui informe de rendimento das fontes pagadoras (empresas, governo, pessoas físicas etc.). Também é preciso guardar comprovantes de  rendimentos de aplicações financeiras em bancos e corretoras.
+O contribuinte deverá manter os comprovantes de todos os rendimentos obtidos ao longo do ano passado. Isso inclui informe de rendimento das fontes pagadoras (empresas, governo, pessoas físicas etc.). Também é preciso guardar comprovantes de  rendimentos de aplicações financeiras em bancos e corretoras.
 Comprovantes de despesas próprias ou de dependentes com médicos, hospitais e clínicas; com planos de saúde, dentistas e psicólogos. Também com gastos para instrução própria e de dependentes.
 Quem paga pensão alimentícia homologada pela Justiça também deve manter os comprovantes de pagamento feitos ao beneficiário. Informações sobre dívidas contraídas no ano anterior, além de comprovantes de eventuais compra e venda de bens móveis e imóveis.
 É fundamental manter comprovantes de todas as receitas e despesas dos dependentes, bem como os comprovantes dos seus respectivos bens e direitos. Amorim lembra que é obrigatório guardar por cinco anos todos os documentos referentes à Declaração. Por precaução, ele recomenda que se guarde por pelo menos seis anos.
-
+            
 Com tudo em mãos, o primeiro passo é baixar o Programa Gerador da Declaração (PGD IRPF 2023) no site da Receita Federal.
-O programa está disponível a partir de 15 de março.
+O programa está disponível a partir de 15 de março.
 O contribuinte que quiser fazer a declaração por meio de smartphones ou tablets também pode baixar o aplicativo “Meu Imposto de Renda” no Google Play (para Android) ou na AppStore (iOS).
 Quem possuir certificado digital ou conta gov.br, poderá acessar o novo portal de serviços da Receita, que no futuro substituirá o antigo Centro Virtual de Atendimento e-CAC. Nesse caso, encontrará a declaração pré-preenchida, bastando apenas validar as informações.
-É importante conferir se está ou não obrigado a informar o número do recibo da declaração de ajuste do ano anterior. Segundo Valdir Amorim, consultor do IOB, o contribuinte está dispensado dessa exigência se a soma dos seus rendimentos e dos dependentes, sujeitos ao ajuste anual, for inferior a R$ 200 mil.
-O programa é autoexplicativo e auxilia no preenchimento, garante o analista. As instruções estão disponíveis a partir do menu “Ajuda” ou acionando a tecla “F1” no campo desejado. O contribuinte deve selecionar na “Tela de Entrada” “nova declaração”, “em preenchimento” ou “já transmitidas”.
+É importante conferir se está ou não obrigado a informar o número do recibo da declaração de ajuste do ano anterior. Segundo Valdir Amorim, consultor do IOB, o contribuinte está dispensado dessa exigência se a soma dos seus rendimentos e dos dependentes, sujeitos ao ajuste anual, for inferior a R$ 200 mil.O programa é autoexplicativo e auxilia no preenchimento, garante o analista. As instruções estão disponíveis a partir do menu “Ajuda” ou acionando a tecla “F1” no campo desejado. O contribuinte deve selecionar na “Tela de Entrada” “nova declaração”, “em preenchimento” ou “já transmitidas”.
 A partir daí, o contribuinte deve preencher cada um dos quadros com as informações necessárias. Soares recomenda que, após a entrega, é importante não esquecer de conferir o “status” da declaração. Se tiver alguma pendência, basta regularizar.
-
+            
 Quem deve declarar Imposto de Renda
-
-Pessoas físicas residentes no Brasil que tiveram, no ano passado, rendimentos tributáveis acima de R$ 30.639,90, como salários;
-Quem recebeu rendimentos isentos, não-tributáveis ou tributados exclusivamente na fonte, superiores a R$ 200 mil, em 2023, como doações e herança;
-Quem, no ano passado, teve receita bruta superior a R$ 153.199,50 em atividade rural;
+            
+Pessoas físicas residentes no Brasil que tiveram, no ano passado, rendimentos tributáveis acima de R$ 30.639,90, como salários;
+Quem recebeu rendimentos isentos, não-tributáveis ou tributados exclusivamente na fonte, superiores a R$ 200 mil, em 2023, como doações e herança;
+Quem, no ano passado, teve receita bruta superior a R$ 153.199,50 em atividade rural;
 Quem pretende compensar prejuízos com a atividade rural de anos-calendário anteriores ou do próprio ano-calendário de 2023.
-Quem tinha, em 31 de dezembro de 2023, bens e direitos (como imóveis, veículos e investimentos) que, somados, superavam R$ 800 mil;
-As pessoas que tiveram ganhos de capital na alienação de bens ou direitos;
-Quem realizou operações de alienação (venda) em bolsas de valores, de mercadorias, de futuros e assemelhadas cuja soma foi superior a R$ 40 mil no ano; ou que teve lucro sujeito à incidência de imposto nas vendas;
-Quem vendeu, no ano passado, imóvel residencial e usou o recurso para compra de outra residência para moradia, dentro do prazo de 180 dias da venda, e optou pela isenção do IR;
-Pessoas que passaram a residir no Brasil em qualquer mês do ano passado;
-Quem possuir investimentos em trust no exterior;
+Quem tinha, em 31 de dezembro de 2023, bens e direitos (como imóveis, veículos e investimentos) que, somados, superavam R$ 800 mil;
+As pessoas que tiveram ganhos de capital na alienação de bens ou direitos;
+Quem realizou operações de alienação (venda) em bolsas de valores, de mercadorias, de futuros e assemelhadas cuja soma foi superior a R$ 40 mil no ano; ou que teve lucro sujeito à incidência de imposto nas vendas;
+Quem vendeu, no ano passado, imóvel residencial e usou o recurso para compra de outra residência para moradia, dentro do prazo de 180 dias da venda, e optou pela isenção do IR;
+Pessoas que passaram a residir no Brasil em qualquer mês do ano passado;
+Quem possuir investimentos em trust no exterior;
 Quem deseja atualizar valor de mercado de bens no exterior;
 Quem optou por detalhar bens do exterior da entidade controlada como se fossem da pessoa física.
-Quem não se enquadra em nenhuma das hipóteses acima está automaticamente dispensado de apresentar a Declaração de Imposto de Renda.
-
+Quem não se enquadra em nenhuma das hipóteses acima está automaticamente dispensado de apresentar a Declaração de Imposto de Renda.
+            
 Deduções
-
+            
 As deduções do Imposto de Renda são, basicamente, os valores que você pode abater da sua declaração. Entre as deduções estão os gastos feitos ao longo de 2023 que, se declarados, podem reduzir o quanto o contribuinte vai pagar de imposto ou mesmo aumentar a restituição.
 Os gastos relacionados à saúde, educação, previdência privada, pensão e dependentes podem ser deduzidos na sua declaração.
 No caso de saúde, gastos com consultas médicas particulares, cirurgias plásticas, hospitais, tratamentos odontológicos, fisioterapia, exames laboratoriais, serviços radiológicos, aparelhos ortopédicos, próteses dentárias, entre outros. As despesas médicas realizadas no exterior também podem ser deduzidas.
-Em relação à educação, o contribuinte pode deduzir gastos próprios e também os gastos que teve com os seus dependentes. Somente podem ser deduzidas as despesas relacionadas à: educação infantil (creches e pré-escolas); ensino fundamental e ensino médio; educação superior (graduação, pós-graduação, mestrado, doutorado e especialização); e ensino técnico e tecnológico. Deduções de cursos de outros idiomas, como cursos de inglês, por exemplo, ou mesmo aulas de esportes e música, não são permitidas.
-Ainda, sobre deduções possíveis no âmbito da previdência privada: os contribuintes que têm planos de previdência PGBL (Plano Gerador de Benefício Livre) podem reduzir a base de cálculo do IR em até 12%. A dedução não vale os planos VGBL (Vida Gerador de Benefício Livre).
+Em relação à educação, o contribuinte pode deduzir gastos próprios e também os gastos que teve com os seus dependentes. Somente podem ser deduzidas as despesas relacionadas à: educação infantil (creches e pré-escolas); ensino fundamental e ensino médio; educação superior (graduação, pós-graduação, mestrado, doutorado e especialização); e ensino técnico e tecnológico. Deduções de cursos de outros idiomas, como cursos de inglês, por exemplo, ou mesmo aulas de esportes e música, não são permitidas.Ainda, sobre deduções possíveis no âmbito da previdência privada: os contribuintes que têm planos de previdência PGBL (Plano Gerador de Benefício Livre) podem reduzir a base de cálculo do IR em até 12%. A dedução não vale os planos VGBL (Vida Gerador de Benefício Livre).
 No caso de pensão alimentícia, o contribuinte que efetua o pagamento pode deduzir o gasto de sua declaração desde que a pensão tenha sido definida por decisão judicial ou por escritura pública (extrajudicial). Vale lembrar que o contribuinte que paga pensão não pode incluir o filho como dependente.
 Também é possível deduzir doações feitas: a) aos fundos controlados pelos conselhos municipais, estaduais, distrital e nacional dos Direitos da Criança e do Adolescente, conforme o Estatuto da Criança e do Adolescente (ECA); b) aos fundos controlados pelos conselhos nacional, distrital, estaduais ou municipais do Idoso; e c) ao Fundo Nacional de Cultura (FNC), à produções audiovisuais, entre outros.
 Quanto às deduções por dependente, são as mesmas que as do ano passado e a recomendação é verificar se foram incluídas todas as receitas recebidas pelos dependentes. Vale checar também se a renda que o dependente recebe já não o obriga a fazer a declaração sozinho.
@@ -257,28 +255,26 @@ R$ 2.275,08 por dependente, atendidas as regras da Receita.
 
     def subcapitulo7_2():
         criar_subcapitulo(
-            "Impostos sobre a propriedade",
+            "Impostos sobre\na propriedade",
             """
-            Qual a diferença entre impostos federais, estaduais e municipais?
+Qual a diferença entre impostos federais, estaduais e municipais?
 
-Impostos Federais –  São responsáveis por cerca de 60% das arrecadações do país. São eles: IOF, II, IPI, IRPF, IRPJ, Cofins, PIS / Pasep, CSLL, INSS.
+Impostos Federais - São responsáveis por cerca de 60% das arrecadações do país. São eles: IOF, II, IPI, IRPF, IRPJ, Cofins, PIS / Pasep, CSLL, INSS.
 
-Impostos Estaduais: São responsáveis por cerca de 28% das arrecadações do país, sendo eles: ICMS, IPVA, ITCMD.
+Impostos Estaduais: São responsáveis por cerca de 28% das arrecadações do país, sendo eles: ICMS, IPVA, ITCMD.
 
-Impostos Municipais:  São responsáveis por cerca de 5,5% das arrecadações do país. São eles: IPTU, ISS, ITBI.
+Impostos Municipais: São responsáveis por cerca de 5,5% das arrecadações do país. São eles: IPTU, ISS, ITBI.
 
 Entenda melhor:
 Os impostos federais, estaduais e municipais são destinados a manter as suas respectivas máquinas públicas funcionando.
- 
 Impostos federais são responsáveis por cerca de 60% (sessenta por cento) do total das arrecadações de impostos no país, sendo os que existem em maior quantidade e também são os mais reconhecidos por suas siglas. Em geral seu destino é a manutenção do Governo Federal. 
 
 São eles:
- 
-II: Imposto sobre importação, para mercadorias vindas de fora do país. 
+II: Imposto sobre importação, para mercadorias vindas de fora do país.
 IOF: Imposto sobre operações financeiras, para empréstimos, ações e demais ações financeiras
 IPI: Imposto sobre produtos industrializados, para a indústria
-IRPF: Imposto de Renda Pessoa Física, sobre a renda do cidadão 
-IRPJ: Imposto de Renda Pessoa Jurídica, sobre a renda de CNPJs
+IRPF: Imposto de Renda Pessoa Física, sobre a renda do cidadão
+IRPJ: Imposto de Renda Pessoa Jurídica, sobre a renda de CNPJs
 Cofins: Contribuição de financiamento da seguridade social
 PIS: Programa de Integração Social
 CSLL: Contribuição social sobre lucro líquido
@@ -288,7 +284,7 @@ Já os impostos estaduais são destinados a manutenção da administração do G
 
 São eles:
 
-ICMS:  Impostos sobre circulação de mercadorias e serviços
+ICMS: Impostos sobre circulação de mercadorias e serviços
 IPVA: Imposto sobre a propriedade de motores automotores
 ITCMD: Imposto de transmissão causa mortis e doação
 
@@ -318,7 +314,7 @@ Empresas de médio e grande porte, que possuem um volume significativo de transa
 
     def subcapitulo7_4():
         criar_subcapitulo(
-            "Impostos sobre heranças e doações",
+            "Impostos sobre\nheranças e doações",
             """
             O Imposto de transmissão causa mortis e doação (ITCMD) é um tributo que incide sobre transmissões gratuitas do patrimônio, ou seja, em situações em que há transferência da propriedade de bens e direitos sem pagamento de um valor em virtude da própria transmissão.
 As transmissões gratuitas que geram incidência do ITCMD são:
@@ -421,21 +417,30 @@ Algumas regiões podem oferecer deduções fiscais ou outros benefícios especí
         criar_subcapitulo(
             "Desafio",
             """
-            Parabéns por ter chegado até 
-            aqui futuro invetidor!\n
-            Agora está na hora de colocar 
-            em prática tudo que você aprendeu 
-            no Capítulo 1 - O que é educação 
-            financeira e por que ela é 
-            importante?\n
-            Crie um orçamento detalhado para 
-            o próximo mês, estabeleça metas 
-            financeiras e monitore seus 
-            hábitos de consumo.\n
-            A pergunta que fica agora é: ao 
-            final do seu orçamento, você se 
-            considera uma pessoa com bons hábitos 
-            financeiros?
+Parabéns por chegar até aqui, futuro especialista em finanças!
+Agora, vamos colocar em prática o que você aprendeu no capítulo Imposto de Renda Pessoa Física (IRPF).
+
+Desafio:
+Organize-se para a próxima declaração de IRPF. Realize as seguintes etapas:
+
+Reúna os documentos necessários:
+
+Informe de rendimentos das fontes pagadoras (empresas, bancos, corretoras).
+Comprovantes de despesas dedutíveis (saúde, educação, doações, entre outros).
+Informações sobre bens e direitos, dívidas e receitas de dependentes.
+Baixe o Programa Gerador da Declaração (PGD IRPF):
+
+Simule o preenchimento de uma declaração com dados fictícios ou reais, dependendo de sua necessidade.
+Identifique as deduções possíveis:
+
+Liste os gastos que podem ser abatidos, como saúde e educação.
+Pesquise sobre o tipo de declaração ideal:
+
+Descubra se você se encaixa no modelo simplificado ou completo.
+Reflexão final:
+Após realizar essas etapas, avalie: você se sente preparado para declarar o imposto de renda? Identificou maneiras de reduzir sua carga tributária de forma legal?
+
+Boa sorte! Lembre-se: entender o IRPF é o primeiro passo para garantir sua conformidade tributária e proteger seu patrimônio.
             """
         )
 

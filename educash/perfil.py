@@ -41,7 +41,7 @@ def PerfilPage(page: ft.Page, id):
         page.go("/editar")
 
     def suporte(_):
-        print("Suporte clicado!")
+        page.go("/suporte")
 
     def sair(_):
         print("Sair clicado!")

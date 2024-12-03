@@ -62,93 +62,93 @@ def Capitulo9Page(page: ft.Page):
     def criar_quiz():
         perguntas = [
             {
-                "pergunta": "",
+                "pergunta": "Qual dos modelos de negócios digitais abaixo se destaca por permitir que profissionais liberais atendam seus clientes de forma mais ágil e prática, sem a necessidade de um espaço físico?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "E-commerce", "correta": False},
+                    {"texto": "Marketplace", "correta": False},
+                    {"texto": "Prestação de serviços online", "correta": True},
+                    {"texto": "Soluções SaaS", "correta": False},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes afirmações sobre o Marketing de Conteúdo é FALSA?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "É uma estratégia antiga que ganhou força com o surgimento das redes sociais.", "correta": False},
+                    {"texto": "Engloba diversos profissionais, como infoprodutores e influenciadores digitais.", "correta": False},
+                    {"texto": "Tem como objetivo principal gerar leads qualificados e aumentar as vendas a curto prazo.", "correta": True},
+                    {"texto": "É uma forma de construir relacionamento com o público e posicionar a marca como autoridade em um determinado assunto.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual das alternativas abaixo representa o maior erro cometido por empreendedores digitais em relação à gestão financeira?",
                 "alternativas": [
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Não ter um plano de negócio detalhado.", "correta": False},
+                    {"texto": "Não investir em marketing digital.", "correta": False},
+                    {"texto": "Misturar as finanças pessoais com as da empresa.", "correta": True},
+                    {"texto": "Não utilizar softwares de gestão financeira.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a importância de projetar o fluxo de caixa para empresas que vendem infoprodutos em lançamentos?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Permite identificar novas oportunidades de mercado.", "correta": False},
+                    {"texto": "Garante que a empresa tenha dinheiro para cobrir os custos em períodos de menor faturamento.", "correta": True},
+                    {"texto": "Aumenta a credibilidade da empresa perante os investidores.", "correta": False},
+                    {"texto": "Diminui a necessidade de contratar funcionários.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é uma tendência do mercado digital mencionada no texto?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Mobile Marketing", "correta": False},
+                    {"texto": "Realidade Virtual", "correta": False},
+                    {"texto": "E-mail Marketing", "correta": True},
+                    {"texto": "Web Analytics", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a principal vantagem do geomarketing para as empresas?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Aumentar o alcance global da marca.", "correta": False},
+                    {"texto": "Reduzir custos com produção de conteúdo.", "correta": False},
+                    {"texto": "Personalizar as ações de marketing para regiões específicas.", "correta": True},
+                    {"texto": "Melhorar a experiência do usuário em sites e aplicativos.", "correta": False},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é um método de pagamento online comum no Brasil?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Cartões de crédito e débito", "correta": False},
+                    {"texto": "Pix", "correta": False},
+                    {"texto": "Dinheiro em espécie", "correta": True},
+                    {"texto": "Carteiras digitais", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Considerando os diferentes métodos de pagamento online apresentados, qual deles é mais indicado para empresas que buscam reduzir custos operacionais e aumentar a agilidade nas transações?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Cartões de crédito e débito", "correta": False},
+                    {"texto": "Pix", "correta": True},
+                    {"texto": "Boletos", "correta": False},
+                    {"texto": "Link de pagamento", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a principal diferença entre o Simples Nacional e o Lucro Presumido em relação à forma de cálculo dos impostos?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "O Simples Nacional calcula os impostos com base na receita bruta, enquanto o Lucro Presumido considera uma estimativa de lucro.", "correta": True},
+                    {"texto": "O Simples Nacional possui alíquotas fixas, enquanto o Lucro Presumido permite a personalização das alíquotas.", "correta": False},
+                    {"texto": "O Simples Nacional é mais complexo que o Lucro Presumido em termos de cálculo.", "correta": False},
+                    {"texto": "O Lucro Presumido é mais indicado para empresas de grande porte, enquanto o Simples Nacional é exclusivo para pequenas empresas.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual regime tributário é mais indicado para um negócio digital com faturamento anual de R$ 3.000.000,00 e uma folha de pagamento que representa 30% do faturamento?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Simples Nacional, Anexo III", "correta": True},
+                    {"texto": "Simples Nacional, Anexo V", "correta": False},
+                    {"texto": "Lucro Presumido", "correta": False},
+                    {"texto": "Lucro Real", "correta": False},
                 ],
             },
         ]
@@ -205,51 +205,51 @@ def Capitulo9Page(page: ft.Page):
 
     def subcapitulo9_1():
         criar_subcapitulo(
-            "Modelos de negócios digitais",
+            "Modelos de\nnegócios digitais",
             """
-            O crescimento do e-commerce e a popularização das estratégias de Marketing de Conteúdo são alguns dos fatores responsáveis pela demanda cada vez maior de serviços relacionados à tecnologia.
-            Os principais modelos de negócios digitais
-            1. E-commerce
-            As lojas virtuais são um símbolo do empreendedorismo digital, pois permitem uma comparação certeira entre os modelos de comércio.
-            O empreendedor que pretende divulgar e vender seus produtos em um e-commerce não se livra das negociações com fornecedores, da administração de estoque e da distribuição de mercadorias, mas consegue concentrar toda a sua vitrine e sua comunicação em um canal facilmente gerenciável.
-            É importante, porém, se manter atento às inovações do setor em termos de tecnologia e resoluções legais.
-            2. Marketplace
-            Para quem deseja vender seus produtos pela internet, mas não dispõe de muitos recursos para criação e divulgação de uma marca, os marketplaces são uma excelente solução.
-            Essas plataformas concentram diversas lojas diferentes dentro de um mesmo espaço, que geralmente já é consolidado e muito acessado. A vantagem é que, além de disponibilizarem tráfego e público qualificado, os marketplaces ainda oferecem diversas ferramentas de promoção e divulgação para seus parceiros.
-            3. Prestação de serviços online
-            A internet também dá espaço para profissionais oferecerem seus serviços, ou parte deles, de maneira online. Advogados, contadores e consultores de marketing, por exemplo, já começaram a explorar os benefícios de atender seus clientes por email, chats e videoconferências.
-            Observe que os benefícios não são apenas para o prestador de serviços, mas também para o consumidor, que consegue ser atendido com mais agilidade e praticidade, sem a necessidade de se deslocar até uma agência ou escritório.
-            4. Marketing de Conteúdo
-            O Marketing de Conteúdo é uma estratégia antiga que ganhou uma nova roupagem após a ascensão dos blogs corporativos e das redes sociais. É um mercado muito amplo que engloba infoprodutores, afiliados, influenciadores, produtores de conteúdo e muitos outros.
-            Não importa a categoria ou o nicho do seu negócio, a única maneira de ganhar notoriedade na internet é produzindo e divulgando informações que atendam os interesses do seu público.
-            5. Soluções SaaS
-            Indo um pouco mais longe, temos as empresas SaaS, sigla que significa Software as a Service, ou “software como serviço”. Essas organizações são o corpo empresarial por trás dos aplicativos, plataformas de serviços e até das redes sociais.
-            É um modelo de negócio complexo, que requer investimentos significativos em desenvolvimento e gestão, mas é uma área de enorme sucesso no mercado que ainda tem muito a crescer. Afinal, são esses empreendimentos que garantem a evolução e o pleno funcionando de boa parte das aplicações online em nossos desktops e smartphones.
+O crescimento do e-commerce e a popularização das estratégias de Marketing de Conteúdo são alguns dos fatores responsáveis pela demanda cada vez maior de serviços relacionados à tecnologia.
+Os principais modelos de negócios digitais
+1. E-commerce
+As lojas virtuais são um símbolo do empreendedorismo digital, pois permitem uma comparação certeira entre os modelos de comércio.
+O empreendedor que pretende divulgar e vender seus produtos em um e-commerce não se livra das negociações com fornecedores, da administração de estoque e da distribuição de mercadorias, mas consegue concentrar toda a sua vitrine e sua comunicação em um canal facilmente gerenciável.
+É importante, porém, se manter atento às inovações do setor em termos de tecnologia e resoluções legais.
+2. Marketplace
+Para quem deseja vender seus produtos pela internet, mas não dispõe de muitos recursos para criação e divulgação de uma marca, os marketplaces são uma excelente solução.
+Essas plataformas concentram diversas lojas diferentes dentro de um mesmo espaço, que geralmente já é consolidado e muito acessado. A vantagem é que, além de disponibilizarem tráfego e público qualificado, os marketplaces ainda oferecem diversas ferramentas de promoção e divulgação para seus parceiros.
+3. Prestação de serviços online
+A internet também dá espaço para profissionais oferecerem seus serviços, ou parte deles, de maneira online. Advogados, contadores e consultores de marketing, por exemplo, já começaram a explorar os benefícios de atender seus clientes por email, chats e videoconferências.
+Observe que os benefícios não são apenas para o prestador de serviços, mas também para o consumidor, que consegue ser atendido com mais agilidade e praticidade, sem a necessidade de se deslocar até uma agência ou escritório.
+4. Marketing de Conteúdo
+O Marketing de Conteúdo é uma estratégia antiga que ganhou uma nova roupagem após a ascensão dos blogs corporativos e das redes sociais. É um mercado muito amplo que engloba infoprodutores, afiliados, influenciadores, produtores de conteúdo e muitos outros.
+Não importa a categoria ou o nicho do seu negócio, a única maneira de ganhar notoriedade na internet é produzindo e divulgando informações que atendam os interesses do seu público.
+5. Soluções SaaS
+Indo um pouco mais longe, temos as empresas SaaS, sigla que significa Software as a Service, ou “software como serviço”. Essas organizações são o corpo empresarial por trás dos aplicativos, plataformas de serviços e até das redes sociais.
+É um modelo de negócio complexo, que requer investimentos significativos em desenvolvimento e gestão, mas é uma área de enorme sucesso no mercado que ainda tem muito a crescer. Afinal, são esses empreendimentos que garantem a evolução e o pleno funcionando de boa parte das aplicações online em nossos desktops e smartphones.
             """
         )
 
     def subcapitulo9_2():
         criar_subcapitulo(
-            "Finanças de um negócio digital",
+            "Finanças de um\nnegócio digital",
             """
-            As empresas digitais e os infoprodutores estão em um mercado promissor. Afinal, com o crescimento do comércio online, as oportunidades se ampliaram para o empreendedor que deseja aproveitá-las. Mas é fundamental ter uma gestão financeira eficiente para que seu negócio alcance sucesso.
-            Assim, é possível manter a boa saúde financeira da organização, crescer e ter resultados positivos. No entanto, o controle das finanças é uma das maiores dificuldades enfrentadas pelos empreendedores. Por isso, é importante obter conhecimento sobre gestão financeira.
-            Com o crescimento desse nicho, surgem mais profissionais e organizações interessados em aproveitar as oportunidades.
-            Entretanto, parte dos empreendedores não se preocupa em ter uma gestão financeira eficaz — pelo menos, até sofrerem as consequências da falta dessa prática. Assim, não ter o controle sobre as finanças é um dos maiores erros no empreendedorismo.
-            Ao retirar dinheiro além do que o caixa suporta, por exemplo, a empresa pode gerar dívidas que se acumulam, prejudicando o seu crescimento. Dessa maneira, a organização que não tem uma gestão financeira eficiente está sujeita ao fracasso.
-            Afinal, uma boa saúde financeira é fundamental para a longevidade de qualquer negócio — inclusive digital. 
-            Não é incomum encontrar empresas digitais mais enxutas, com poucos funcionários e a presença do empreendedor em funções mais ativas. Essa estrutura simples pode trazer vantagens e riscos. Um deles é levar o proprietário a misturar as finanças de pessoa física e pessoa jurídica.
-            Esse equívoco compromete muito a saúde financeira do seu negócio — e, consequentemente, as suas finanças pessoais. Isso porque misturar as contas não dá clareza sobre o caixa necessário para o negócio. Assim, a empresa pode não ter capital para seguir suas operações, por exemplo.
-            Por isso, vale a pena ter mais de uma conta bancária. Também é válido determinar o seu salário e viver com esse dinheiro. O restante será o dinheiro da empresa.
-            Após entender a importância de separar as finanças da empresa e da pessoa física, é o momento de analisar a situação atual do seu negócio. Para isso, saiba qual é o valor em caixa, a média de vendas mensais, se há dívidas vencidas e a vencer etc.
-            Desse modo, você tem informações relevantes para elaborar um plano de ação para a gestão financeira.
-            Os indicadores são ferramentas que mensuram o desempenho de determinado processo ou setor. No caso dos indicadores financeiros, eles quantificam a performance das finanças da empresa. Assim, eles funcionam como um guia para entender a situação real do negócio e tomar decisões.
-            O lucro líquido, por exemplo, é o dinheiro que sobra no caixa após pagar todas as despesas da empresa.
-            Além de entender a situação atual da empresa e analisar indicadores, é interessante projetar o fluxo de caixa para os próximos meses. Isso é especialmente relevante para quem vende infoprodutos em lançamento.
-            Afinal, nessa modalidade de vendas, a entrada de receita é sazonal. Assim, ao fazer a projeção do faturamento, você garante que a organização terá dinheiro para cobrir os custos nas épocas em que não há entradas no caixa.
-            Como foi possível acompanhar, fazer a gestão financeira de uma empresa digital não é uma tarefa fácil, principalmente para quem não está habituado a essa atividade. Ao mesmo tempo, o gerenciamento deve ser feito regularmente e sem erros.
-            Felizmente, há como contar com software especializado para obter ajuda em todos os processos 
-            Além disso, você pode automatizar as tarefas burocráticas, como emissão de boletos e notas fiscais, e aproveitar outras funcionalidades. Assim, será viável ter mais tempo para se dedicar a outras atividades do seu negócio e buscar aumento de lucros.
+As empresas digitais e os infoprodutores estão em um mercado promissor. Afinal, com o crescimento do comércio online, as oportunidades se ampliaram para o empreendedor que deseja aproveitá-las. Mas é fundamental ter uma gestão financeira eficiente para que seu negócio alcance sucesso.
+Assim, é possível manter a boa saúde financeira da organização, crescer e ter resultados positivos. No entanto, o controle das finanças é uma das maiores dificuldades enfrentadas pelos empreendedores. Por isso, é importante obter conhecimento sobre gestão financeira.
+Com o crescimento desse nicho, surgem mais profissionais e organizações interessados em aproveitar as oportunidades.
+Entretanto, parte dos empreendedores não se preocupa em ter uma gestão financeira eficaz — pelo menos, até sofrerem as consequências da falta dessa prática. Assim, não ter o controle sobre as finanças é um dos maiores erros no empreendedorismo.
+Ao retirar dinheiro além do que o caixa suporta, por exemplo, a empresa pode gerar dívidas que se acumulam, prejudicando o seu crescimento. Dessa maneira, a organização que não tem uma gestão financeira eficiente está sujeita ao fracasso. 
+Afinal, uma boa saúde financeira é fundamental para a longevidade de qualquer negócio — inclusive digital.
+Não é incomum encontrar empresas digitais mais enxutas, com poucos funcionários e a presença do empreendedor em funções mais ativas. Essa estrutura simples pode trazer vantagens e riscos. Um deles é levar o proprietário a misturar as finanças de pessoa física e pessoa jurídica.
+Esse equívoco compromete muito a saúde financeira do seu negócio — e, consequentemente, as suas finanças pessoais. Isso porque misturar as contas não dá clareza sobre o caixa necessário para o negócio. Assim, a empresa pode não ter capital para seguir suas operações, por exemplo. 
+Por isso, vale a pena ter mais de uma conta bancária. Também é válido determinar o seu salário e viver com esse dinheiro. O restante será o dinheiro da empresa.
+Após entender a importância de separar as finanças da empresa e da pessoa física, é o momento de analisar a situação atual do seu negócio. Para isso, saiba qual é o valor em caixa, a média de vendas mensais, se há dívidas vencidas e a vencer etc.
+Desse modo, você tem informações relevantes para elaborar um plano de ação para a gestão financeira.
+Os indicadores são ferramentas que mensuram o desempenho de determinado processo ou setor. No caso dos indicadores financeiros, eles quantificam a performance das finanças da empresa. Assim, eles funcionam como um guia para entender a situação real do negócio e tomar decisões.
+O lucro líquido, por exemplo, é o dinheiro que sobra no caixa após pagar todas as despesas da empresa.
+Além de entender a situação atual da empresa e analisar indicadores, é interessante projetar o fluxo de caixa para os próximos meses. Isso é especialmente relevante para quem vende infoprodutos em lançamento. 
+Afinal, nessa modalidade de vendas, a entrada de receita é sazonal. Assim, ao fazer a projeção do faturamento, você garante que a organização terá dinheiro para cobrir os custos nas épocas em que não há entradas no caixa.
+Como foi possível acompanhar, fazer a gestão financeira de uma empresa digital não é uma tarefa fácil, principalmente para quem não está habituado a essa atividade. Ao mesmo tempo, o gerenciamento deve ser feito regularmente e sem erros.
+Felizmente, há como contar com software especializado para obter ajuda em todos os processos
+Além disso, você pode automatizar as tarefas burocráticas, como emissão de boletos e notas fiscais, e aproveitar outras funcionalidades. Assim, será viável ter mais tempo para se dedicar a outras atividades do seu negócio e buscar aumento de lucros.
             """
         )
 
@@ -257,7 +257,7 @@ def Capitulo9Page(page: ft.Page):
         criar_subcapitulo(
             "Pagamento online",
             """
-            Para uma transação digital acontecer sem fraudes ou problemas, principalmente em um e-commerce, gestores precisam utilizar meios de garantir a segurança em pagamentos online, a exemplo da criptografia e da autenticação em dois fatores, dentre outros que você confere neste artigo.
+Para uma transação digital acontecer sem fraudes ou problemas, principalmente em um e-commerce, gestores precisam utilizar meios de garantir a segurança em pagamentos online, a exemplo da criptografia e da autenticação em dois fatores, dentre outros que você confere neste artigo.
 O primeiro passo para qualquer empreendedor saber como evitar golpes online, inclusive colocando-se no lugar de quem compra, é saber detalhes sobre o processo de pagamento digital e quais os meios mais usados.
 Para que um pagamento online aconteça, é fundamental que tanto as empresas quanto os consumidores tenham acesso a ferramentas digitais. Quem fornece um produto ou serviço precisa contar com um e-commerce, uma plataforma de vendas na web, e o cliente precisa usufruir do máximo de flexibilidade em termos de opções de pagamentos.
 Destaque para cartões de crédito e débito, Pix, boletos, links de pagamento e carteiras digitais.
@@ -274,9 +274,9 @@ Enfim, a verdade é que, a cada dia que passa, a população no geral toca menos
 
     def subcapitulo9_4():
         criar_subcapitulo(
-            "Impostos para negócios digitais",
+            "Impostos para\nnegócios digitais",
             """
-            Dentre as opções mais comuns para negócios online, destacam-se o Simples Nacional, mencionado anteriormente, e o Lucro Presumido. Para aqueles cuja receita ultrapassa a impressionante marca de 78 milhões ao ano, o Lucro Real se torna a única opção. 
+Dentre as opções mais comuns para negócios online, destacam-se o Simples Nacional, mencionado anteriormente, e o Lucro Presumido. Para aqueles cuja receita ultrapassa a impressionante marca de 78 milhões ao ano, o Lucro Real se torna a única opção. 
 
 Simples Nacional
 O Simples Nacional é um regime tributário que se destaca por consolidar o pagamento de até oito diferentes impostos em uma única guia. Essa simplificação facilita enormemente o processo de recolhimento tributário mensal para pequenos e médios negócios digitais.
@@ -327,24 +327,32 @@ Este detalhe é fundamental para negócios online que apresentam uma receita ele
 
     def subcapitulo9_5():
         criar_subcapitulo(
-            "Tendências do mercado digital e oportunidades de investimento",
+            "Tendências do\nmercado digital\ne \nde investimento",
             """
-            O mercado digital é uma expressão abrangente para cobrir todas as atividades comerciais que se estabelecem na internet, desde as atividades de compra, venda, anúncio, atendimento e demais interações que ocorrem, acontece por meio de interações entre os consumidores e as empresas no ambiente online. Isso significa que é essencial ter acesso à internet para conseguir aproveitar o crescimento que ele vem apresentando, além de entender o comportamento do consumidor.
+O mercado digital é uma expressão abrangente para cobrir todas as atividades comerciais que se estabelecem na internet, desde as atividades de compra, venda, anúncio, atendimento e demais interações que ocorrem, acontece por meio de interações entre os consumidores e as empresas no ambiente online. Isso significa que é essencial ter acesso à internet para conseguir aproveitar o crescimento que ele vem apresentando, além de entender o comportamento do consumidor.
 Existem vários aspectos que tornam o mercado digital e suas plataformas um ambiente atrativo. O melhor é que isso acontece por um custo bem baixo, além de existirem ferramentas que podem potencializar os resultados, oferecendo escalabilidade para o seu empreendimento. Há vários modelos de negócios que podem ser iniciados nesse ambiente.
 Por fim, vale ressaltar a possibilidade de acompanhar métricas para encontrar pontos de melhorias, sendo essa uma característica muito forte desse ambiente.
+
 O mercado digital é um oceano azul, cheio de oportunidades para as empresas. Porém, para aproveitá-las da melhor forma possível, é importante entender as tendências para aplicá-las em seu negócio. 
+
 1 - Mobile Marketing
 O uso de smartphones é muito elevado no Brasil e no mundo. Segundo dados, já são mais de 190 milhões de aparelhos. Por isso, o mobile marketing é uma tendência que merece atenção. Para aproveitá-la, é preciso ajustar as suas páginas, tornando-as mobile friendly. Ou seja, elas devem se adaptar às telas dos dispositivos móveis para oferecer uma experiência incrível para os consumidores.
+
 2 - Lives
 Outra estratégia de marketing digital de sucesso, que pode ser aproveitada nesse mercado, são as transmissões ao vivo. Elas representam uma ótima maneira de criar vínculo com a audiência da empresa. E isso é essencial, afinal, as pessoas compram de quem elas confiam. 
+
 3 - Conteúdos visuais
 Os conteúdos visuais também ganharam campo e hoje são uma das tendências do mercado digital. Principalmente os desenvolvidos em vídeo, que prendem a atenção das pessoas.
+
 4 - Realidade virtual
 A transformação digital também está ganhando espaço e se tornando cada vez mais real no mundo. Com isso, recursos de realidade virtual também obtém destaque no mundo online.
+
 5 - Geomarketing
 O geomarketing não é uma novidade, porém, entra na lista porque é eficaz e pode agregar muito nas estratégias e transformação digital em vendas da sua empresa. Isso porque ele foca em ações específicas para uma região. Por exemplo, você consegue limitar os anúncios realizados por meio das redes sociais apenas para a sua cidade. 
+
 6 - Web Analytics
 O uso de dados é cada vez mais primordial para acompanhar a performance das campanhas de marketing e vendas e adotar melhorias. Para isso é preciso realizar análises detalhadas a fim de encontrar possíveis erros. É aí que entra o Web Analytics. Ele vai ajudar a encontrar ideias do que pode ser feito no seu negócio e identificar os pontos fracos e fortes das ações que estão sendo implementadas.
+
 7 - Inteligência artificial
 Por fim, a tendência da moda é a inteligência artificial. Ferramentas como o ChatGPT tem conquistado espaço no cotidiano das pessoas. Inclusive, conforme dados levantados, esse foi o aplicativo com crescimento mais rápido da história. Recursos que usam a IA podem ajudar no atendimento ao público, nas estratégias de marketing, edição de imagens e com muitas outras tarefas.
             """
@@ -357,21 +365,26 @@ Por fim, a tendência da moda é a inteligência artificial. Ferramentas como o 
         criar_subcapitulo(
             "Desafio",
             """
-            Parabéns por ter chegado até 
-            aqui futuro invetidor!\n
-            Agora está na hora de colocar 
-            em prática tudo que você aprendeu 
-            no Capítulo 1 - O que é educação 
-            financeira e por que ela é 
-            importante?\n
-            Crie um orçamento detalhado para 
-            o próximo mês, estabeleça metas 
-            financeiras e monitore seus 
-            hábitos de consumo.\n
-            A pergunta que fica agora é: ao 
-            final do seu orçamento, você se 
-            considera uma pessoa com bons hábitos 
-            financeiros?
+Parabéns por chegar até aqui, futuro empreendedor digital!
+Você explorou conceitos fundamentais sobre Modelos de Negócios Digitais, Finanças, Pagamentos Online, Impostos e Tendências do Mercado Digital. Agora é a hora de colocar seus conhecimentos em prática e dar o primeiro passo na jornada rumo ao sucesso no mercado online.
+
+Sua missão:
+Escolha um modelo de negócio digital que você gostaria de implementar (e-commerce, marketplace, SaaS, etc.).
+Elabore um plano financeiro básico para os primeiros 6 meses, respondendo às seguintes perguntas:
+Qual será seu investimento inicial?
+Quais são os principais custos fixos e variáveis?
+Quanto você espera faturar mensalmente?
+Utilize um indicador financeiro (como lucro líquido ou margem de contribuição) para projetar o desempenho do seu negócio.
+Planeje sua estratégia de pagamento online:
+Quais métodos de pagamento você oferecerá?
+Como garantirá segurança nas transações?
+Estude o regime tributário mais adequado para o seu negócio (Simples Nacional ou Lucro Presumido) e calcule o impacto dos impostos no seu faturamento.
+Reflexão final:
+Após concluir este desafio, reflita:
+
+Sua estratégia financeira é realista e sustentável?
+Quais ajustes você faria no seu planejamento?
+A pergunta que fica é: você está pronto para transformar sua ideia em um negócio digital de sucesso?
             """
         )
 

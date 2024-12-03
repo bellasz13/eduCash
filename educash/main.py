@@ -80,6 +80,7 @@ from capitulo8 import Capitulo8Page
 from capitulo9 import Capitulo9Page
 from capitulo10 import Capitulo10Page
 from perfil import PerfilPage
+from suporte import SuportePage
 from editar import EditarPage
 
 def MainPage(page: ft.Page):
@@ -195,6 +196,8 @@ def main(page: ft.Page):
             Capitulo9Page(page)
         elif page.route == "/capitulo10":
             Capitulo10Page(page)
+        elif page.route == "/suporte":
+            SuportePage(page)
         elif page.route == "/perfil":
             if usuario_logado:
                 PerfilPage(page, id=usuario_logado['id'])

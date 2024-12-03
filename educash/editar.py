@@ -45,7 +45,7 @@ def EditarPage(page: ft.Page, id):
     data_nascimento = usuario["data_nascimento"] if usuario and "data_nascimento" in usuario else "Data de nascimento não informada"
     
     def voltar_para_anterior(_):
-        page.go("/inicial")
+        page.go("/perfil")
     
     def salvar_alteracoes(_):
         try:

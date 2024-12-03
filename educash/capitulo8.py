@@ -62,93 +62,93 @@ def Capitulo8Page(page: ft.Page):
     def criar_quiz():
         perguntas = [
             {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é uma tendência do mercado imobiliário para 2024?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Aumento da demanda por imóveis sustentáveis.", "correta": False},
+                    {"texto": "Maior procura por imóveis com plantas flexíveis.", "correta": False},
+                    {"texto": "Diminuição do interesse por condomínios multifuncionais.", "correta": True},
+                    {"texto": "Crescente investimento em sistemas de segurança residencial.", "correta": False},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual fator contribui para o aumento da demanda por imóveis sustentáveis em 2024?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Diminuição dos custos de construção de imóveis ecológicos.", "correta": False},
+                    {"texto": "Crescente preocupação com as questões ambientais e sociais.", "correta": True},
+                    {"texto": "Aumento da oferta de materiais de construção convencionais.", "correta": False},
+                    {"texto": "Diminuição da conscientização da população sobre a importância da sustentabilidade.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual é a principal vantagem de investir em Fundos Imobiliários em comparação com a compra direta de um imóvel?",
                 "alternativas": [
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Maior liquidez", "correta": True},
+                    {"texto": "Isenção total de impostos", "correta": False},
+                    {"texto": "Garantia de valorização do investimento", "correta": False},
+                    {"texto": "Menor risco de mercado", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é uma forma de um FII gerar renda?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Aluguel de imóveis", "correta": False},
+                    {"texto": "Venda de cotas para outros investidores", "correta": True},
+                    {"texto": "Aquisição de títulos de renda fixa", "correta": False},
+                    {"texto": "Construção e venda de imóveis", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual a principal diferença entre o Sistema Financeiro de Habitação (SFH) e o Sistema Financeiro Imobiliário (SFI)?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "O SFH é exclusivo para pessoas físicas, enquanto o SFI pode ser utilizado por pessoas físicas e jurídicas.", "correta": True},
+                    {"texto": "O SFH possui taxas de juros mais elevadas que o SFI.", "correta": False},
+                    {"texto": "O SFH não permite a utilização do FGTS, enquanto o SFI permite.", "correta": False},
+                    {"texto": "O SFH é destinado exclusivamente a imóveis de alto padrão.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual programa governamental oferece subsídios e taxas de juros reduzidas para a aquisição de moradias populares?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Sistema Financeiro de Habitação (SFH)", "correta": False},
+                    {"texto": "Sistema Financeiro Imobiliário (SFI)", "correta": False},
+                    {"texto": "Programa Minha Casa, Minha Vida", "correta": True},
+                    {"texto": "Financiamento direto com a construtora", "correta": False},
                 ],
             },
             {
-                "pergunta": "",
+                "pergunta": "Qual imposto é cobrado em casos de falecimento ou doação de um imóvel?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "ITBI", "correta": False},
+                    {"texto": "ITCMD", "correta": True},
+                    {"texto": "IPTU", "correta": False},
+                    {"texto": "Imposto de Renda", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Em qual situação o ITBI NÃO é cobrado?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Na compra de um imóvel por uma pessoa física.", "correta": False},
+                    {"texto": "Na transferência de um imóvel por herança.", "correta": True},
+                    {"texto": "Na compra de um imóvel na planta.", "correta": False},
+                    {"texto": "Na compra de um imóvel com financiamento.", "correta": False},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual das seguintes opções NÃO é um fator importante para determinar o valor de locação de um imóvel?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Localização", "correta": False},
+                    {"texto": "Condições do imóvel", "correta": False},
+                    {"texto": "Cor das paredes", "correta": False},
+                    {"texto": "Tamanho do jardim do imóvel", "correta": True},
                 ],
             },
                 {
-                "pergunta": "",
+                "pergunta": "Qual é a principal função da vistoria de entrada em um imóvel alugado?",
                 "alternativas": [
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": True},
-                    {"texto": "", "correta": False},
-                    {"texto": "", "correta": False},
+                    {"texto": "Verificar se o imóvel está em condições de ser alugado.", "correta": False},
+                    {"texto": "Descrever o estado do imóvel antes da entrada do inquilino.", "correta": False},
+                    {"texto": "Avaliar a capacidade financeira do inquilino.", "correta": True},
+                    {"texto": "Negociar o valor do aluguel com o inquilino.", "correta": False},
                 ],
             },
         ]
@@ -207,7 +207,7 @@ def Capitulo8Page(page: ft.Page):
         criar_subcapitulo(
             "Mercado imobiliário",
             """
-            Frequentemente, as mudanças sociais, ambientais, culturais, bem como as inovações tecnológicas transformam o cenário e influenciam nas nossas decisões. Por isso, antes de se decidir sobre comprar ou não um imóvel, é fundamental saber quais são as tendências do momento.
+Frequentemente, as mudanças sociais, ambientais, culturais, bem como as inovações tecnológicas transformam o cenário e influenciam nas nossas decisões. Por isso, antes de se decidir sobre comprar ou não um imóvel, é fundamental saber quais são as tendências do momento.
 Nesse sentido, o setor imobiliário atua fortemente, move o país e dita o comportamento desse mercado, que impactam outros movimentos da economia. Mas, quais serão as tendências para 2024? Para saber mais, continue acompanhando o artigo.
 
 Para 2024, então, as projeções são otimistas, considerando o saldo positivo apresentado no mercado imobiliário em 2023. Com uma oferta maior de linhas de crédito e um incremento nas vendas, o cenário tende a ser promissor.
@@ -243,9 +243,9 @@ Essas tecnologias, compostas por controle de acesso, câmeras e outros equipamen
 
     def subcapitulo8_2():
         criar_subcapitulo(
-            "Tipos de investimento em imóveis",
+            "Tipos de investimento\nem imóveis",
             """
-            Aluguel de imóveis: os FIIs que possuem imóveis utilizam-os para gerar renda através do aluguel. Com isso, o fundo capta recursos através de contratos de aluguéis e essa renda se converte em rendimento;
+Aluguel de imóveis: os FIIs que possuem imóveis utilizam-os para gerar renda através do aluguel. Com isso, o fundo capta recursos através de contratos de aluguéis e essa renda se converte em rendimento;
 Arrendamento de imóveis: o arrendamento de um imóvel é o contrato pelo qual o contratado se obriga a ceder o ativo, por tempo determinado ou não, com o objetivo de nele ser exercida atividade de exploração;
 Construção de imóveis: nesse caso, o fundo utiliza seus recursos para incorporação e construção de imóveis para futura venda, e assim, lucrar com o negócio;
 Aquisição de títulos de renda fixa: essa é uma prática comum principalmente nos fundos de papel, em que são adquiridos recebíveis e títulos atrelados ao mercado imobiliário, como LCIs e CRIs, que geram um retorno mensal na forma de juros;
@@ -312,7 +312,7 @@ Previsibilidade da renda: existem vários ativos de renda variável que são fon
         criar_subcapitulo(
             "Financiamento imobiliário",
             """
-            De forma resumida, trata-se de pegar dinheiro emprestado com um banco para comprar um imóvel.
+De forma resumida, trata-se de pegar dinheiro emprestado com um banco para comprar um imóvel.
 O método mais comum é o comprador pagar um valor de entrada e solicitar o restante ao banco. Esse montante será pago em prestações acrescidas de juros por um prazo que, dependendo do banco, pode se estender por até 35 anos.
 Caso você seja um investidor de imóveis, vale lembrar que, durante o período de financiamento, o imóvel fica ligado a você, mas não pode ser negociado. Ou seja, uma revenda será impossível enquanto a dívida com o banco não for paga.
 Tipos de financiamento
@@ -398,9 +398,9 @@ Seguir esses passos e planejar cuidadosamente ajudará a tornar esse processo ma
 
     def subcapitulo8_4():
         criar_subcapitulo(
-            "Impostos e custos envolvidos na compra e venda de imóveis",
+            "Impostos e custos\nenvolvidos na\ncompra e venda\nde imóveis",
             """
-            O Imposto de Transmissão de Bens Imóveis — mais conhecido pela sigla ITBI — é um tributo municipal que deve ser pago quando ocorre uma transferência imobiliária.
+O Imposto de Transmissão de Bens Imóveis — mais conhecido pela sigla ITBI — é um tributo municipal que deve ser pago quando ocorre uma transferência imobiliária.
 Dessa forma, a oficialização do processo de compra e venda só será feita após o seu acerto, sendo que, sem a confirmação de pagamento do tributo, o imóvel não pode ser transferido e a documentação não é liberada.
 Previsto na Constituição Federal, esse imposto é cobrado apenas quando ocorre a transmissão de posse de um imóvel envolvendo pessoas vivas.
 Quando há sucessão por meio do falecimento ou doação, é cobrado o Imposto sobre Transmissão “Causa Mortis” e Doação (ITCMD).
@@ -480,9 +480,9 @@ As transações imobiliárias podem parecer muito complicadas mas, no final, é 
 
     def subcapitulo8_5():
         criar_subcapitulo(
-            "Gestão de um imóvel alugado",
+            "Gestão de um\nimóvel alugado",
             """
-            Estratégias para fixar um valor de locação adequado
+Estratégias para fixar um valor de locação adequado
 
 Fixar um valor de locação adequado para o seu imóvel é fundamental para atrair inquilinos e garantir um retorno financeiro satisfatório. Para determinar um preço justo, é essencial realizar uma análise de mercado, considerando os valores de imóveis similares na mesma área. 
 Fatores como localização, tamanho, condições do imóvel e comodidades oferecidas desempenham um papel crucial na definição do preço. É importante também estar atento às tendências do mercado imobiliário da sua região, ajustando o valor de acordo com a demanda e a oferta. 
@@ -578,21 +578,30 @@ Em casos de desacordos ou problemas com inquilinos, a imobiliária atua como med
         criar_subcapitulo(
             "Desafio",
             """
-            Parabéns por ter chegado até 
-            aqui futuro invetidor!\n
-            Agora está na hora de colocar 
-            em prática tudo que você aprendeu 
-            no Capítulo 1 - O que é educação 
-            financeira e por que ela é 
-            importante?\n
-            Crie um orçamento detalhado para 
-            o próximo mês, estabeleça metas 
-            financeiras e monitore seus 
-            hábitos de consumo.\n
-            A pergunta que fica agora é: ao 
-            final do seu orçamento, você se 
-            considera uma pessoa com bons hábitos 
-            financeiros?
+Parabéns por ter chegado até aqui, futuro investidor e conhecedor do mercado imobiliário! Agora é hora de aplicar os conceitos que você aprendeu sobre tendências do setor, tipos de investimentos e gestão de imóveis.
+
+Desafio: Planeje e Decida Sua Estratégia Imobiliária
+Com base nos tópicos apresentados, escolha uma das seguintes opções e desenvolva um plano detalhado para colocá-la em prática:
+
+Compra e Revenda de Imóveis Sustentáveis:
+
+Identifique as vantagens de adquirir imóveis ecológicos.
+Pesquise as regiões com maior demanda por construções sustentáveis em 2024.
+Elabore um planejamento financeiro considerando custos, financiamento e margem de lucro.
+Investimento em FIIs (Fundos Imobiliários):
+
+Determine o tipo de fundo imobiliário que melhor atende às suas metas financeiras.
+Simule os ganhos com rendimentos passivos e valorização de cotas.
+Analise o impacto das taxas de juros e liquidez no seu plano.
+Gestão de Imóveis para Aluguel:
+
+Escolha um tipo de imóvel e pesquise os custos de manutenção e impostos (como o ITBI).
+Elabore estratégias de precificação, divulgação e contrato de locação.
+Prepare um plano de ação para realizar vistorias, manutenções e gerenciar inquilinos.
+Pergunta Reflexiva
+Após elaborar sua estratégia, pergunte a si mesmo: Quais são os desafios mais importantes que preciso superar para alcançar meus objetivos no mercado imobiliário?
+
+Lembre-se, o mercado imobiliário está em constante transformação, e o conhecimento é a chave para tomar decisões informadas e bem-sucedidas. Boa sorte no desafio!
             """
         )
 
