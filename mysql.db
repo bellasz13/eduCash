@@ -1,0 +1,20 @@
+CREATE DATABASE educash;
+
+CREATE TABLE cadastro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255)   
+ NOT NULL
+);
+CREATE TABLE extra (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    telefone VARCHAR(20),
+    data_nascimento  VARCHAR(20),
+    FOREIGN KEY (usuario_id) REFERENCES cadastro(id)
+);
+
+CREATE INDEX idx_extra_usuario_id ON extra(usuario_id);
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'isabella2005'
